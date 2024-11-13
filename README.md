@@ -1,4 +1,21 @@
-###тестовое intelvision
+## Запуск проекта
+
+Для запуска приложения передайте два параметра: количество портов IN и количество портов OUT.
+
+ ```bash
+    git clone https://github.com/username/project_ports.git
+    cd project_ports
+
+    go mod tidy
+
+    go run main.go <num_in_ports> <num_out_ports>
+```
+Где:
+    - `<num_in_ports>` — количество портов типа IN (например, `3`).
+    - `<num_out_ports>` — количество портов типа OUT (например, `2`).
+
+
+### тестовое intelvision
 
 Есть Объект – “Порт”, он бывает 2-ух типов: IN и OUT. 
 При запуске приложения в него передаются 2 параметра: кол-во IN и OUT портов. 

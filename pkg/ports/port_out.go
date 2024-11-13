@@ -11,7 +11,7 @@ func (p *OutPort) GetID() int {
 }
 
 func (p *OutPort) Write(transactionID, value int) error {
-	// Логика записи значения в OUT порт
+	// запись значения в OUT порт
 	fmt.Printf("Transaction %d: Writing value %d to OUT port %d\n", transactionID, value, p.ID)
 	return nil
 }

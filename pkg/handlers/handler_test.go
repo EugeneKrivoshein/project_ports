@@ -20,7 +20,6 @@ func TestHandleInPort(t *testing.T) {
 
 	// Создаем контекст с отменой, чтобы управлять завершением горутины
 	ctx, cancel := context.WithCancel(context.Background())
-	defer cancel()
 
 	// Запускаем обработчик с передачей контекста
 	go HandleInPort(ctx, inPort)
@@ -28,16 +27,13 @@ func TestHandleInPort(t *testing.T) {
 	// Даем горутине немного времени на выполнение
 	time.Sleep(2 * time.Second)
 
-	// Завершаем работу горутины
 	cancel()
 }
 
 func TestHandleOutPort(t *testing.T) {
 	outPort := &MockPort{id: 2}
 
-	// Создаем контекст с отменой для управления завершением горутины
 	ctx, cancel := context.WithCancel(context.Background())
-	defer cancel()
 
 	// Запускаем обработчик OUT порта
 	go HandleOutPort(ctx, outPort)
@@ -45,6 +41,5 @@ func TestHandleOutPort(t *testing.T) {
 	// Даем горутине немного времени на выполнение
 	time.Sleep(2 * time.Second)
 
-	// Завершаем работу горутины
 	cancel()
 }

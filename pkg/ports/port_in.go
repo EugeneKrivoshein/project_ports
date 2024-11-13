@@ -11,6 +11,6 @@ func (p *InPort) GetID() int {
 }
 
 func (p *InPort) Read() (int, error) {
-	// Логика чтения значения (например, случайное число 0 или 1)
+	// чтение значения (случайное число 0 или 1)
 	return rand.Intn(2), nil
 }
