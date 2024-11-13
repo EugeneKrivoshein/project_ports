@@ -7,7 +7,6 @@ import (
 	"strconv"
 )
 
-// Config содержит количество IN и OUT портов и контекст завершения
 type Config struct {
 	NumInPorts  int
 	NumOutPorts int
