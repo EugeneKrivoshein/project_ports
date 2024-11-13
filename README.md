@@ -3,12 +3,12 @@
 Для запуска приложения передайте два параметра: количество портов IN и количество портов OUT.
 
  ```bash
-    git clone https://github.com/username/project_ports.git
+    git clone https://github.com/EugeneKrivoshein/project_ports.git
     cd project_ports
 
     go mod tidy
 
-    go run main.go <num_in_ports> <num_out_ports>
+    go run cmd/main.go <num_in_ports> <num_out_ports>
 ```
 Где:
     - `<num_in_ports>` — количество портов типа IN (например, `3`).
